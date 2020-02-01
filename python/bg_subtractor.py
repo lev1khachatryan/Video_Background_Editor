@@ -4,9 +4,10 @@ import cv2
 import configparser
 
 def main():
+	# Read config file
 	config = configparser.ConfigParser()
 	config.read('config.INI')
-
+	# Get necessary information from config file
 	INPUT_PATH = config['paths']['INPUT_PATH']
 	OUTPUT_PATH = config['paths']['OUTPUT_PATH']
 	BG_VIDEO_NAME = config['addition']['BG_VIDEO_NAME']
