@@ -1,17 +1,22 @@
+from __future__ import print_function
 import numpy as np
 import cv2
 import configparser
 
 def main():
 	config = configparser.ConfigParser()
-	config.read('../config.INI')
+	config.read('config.INI')
 
 	INPUT_PATH = config['paths']['INPUT_PATH']
 	OUTPUT_PATH = config['paths']['OUTPUT_PATH']
 	BG_VIDEO_NAME = config['addition']['BG_VIDEO_NAME']
 
 	# Open Video
-	cap = cv2.VideoCapture(INPUT_PATH + BG_VIDEO_NAME)
+	cap = cv2.VideoCapture(cv2.samples.findFileOrKeep(INPUT_PATH + BG_VIDEO_NAME))
+
+	if not cap.isOpened:
+	    print('Unable to open: ' + INPUT_PATH + BG_VIDEO_NAME)
+	    exit(0)
 
 	# Randomly select 25 frames
 	frameIds = cap.get(cv2.CAP_PROP_FRAME_COUNT) * np.random.uniform(size=25)
@@ -24,8 +29,8 @@ def main():
 	    frames.append(frame)
 	 
 	# Calculate the median along the time axis
-	medianFrame = np.median(frames, axis=0).astype(dtype=np.uint8)    
-	 
+	medianFrame = np.median(frames, axis=0).astype(dtype=np.uint8)
+
 	# Display median frame
 	# cv2.imshow('frame', medianFrame)
 	# cv2.waitKey(0)
