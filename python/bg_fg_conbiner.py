@@ -97,11 +97,13 @@ def fgBgCombiner(path, bg_frame, save_dir):
 	    frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 	    # Initial mask
 	    mask = np.zeros(frame.shape[:2], np.uint8)
-	    # Background and foreground models for grabCut
+	    # These are arrays used by the algorithm internally.
 	    bgdModel = np.zeros((1, 65), np.float64)
 	    fgdModel = np.zeros((1, 65), np.float64)
 	    # Specify a region of interest (RoI) and apply grabCut algorithm
 	    rect = (200, 50, 300, 400)
+	    # Number of iterations the algorithm should run is 1
+	    # which is fast but not good for correct segmentation
 	    cv2.grabCut(frame, mask, rect, bgdModel, fgdModel, 1, cv2.GC_INIT_WITH_RECT)
 	    # New mask for moving object
 	    mask2 = np.where((mask == 2) | (mask == 0), (0,), (1,)).astype('uint8')
