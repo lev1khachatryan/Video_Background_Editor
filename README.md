@@ -65,7 +65,7 @@ There are two resource consumption points:
 
 ## Usage
 
-1. Make sure you have installed [python3](https://www.python.org/downloads/) and all [required](https://github.com/lev1khachatryan/VideoBackgroundEditor/blob/master/requirements.txt) packages.
+1. Make sure you have installed [python3](https://www.python.org/downloads/) and all [required](https://github.com/lev1khachatryan/VideoBackgroundEditor/blob/master/requirements.txt) packages.If you won't be using docker, then run `pip install -r requirements.txt`.
 
 2. Go to python directory.
 
