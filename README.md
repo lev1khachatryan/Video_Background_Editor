@@ -65,11 +65,13 @@ There are two resource consumption points:
 
 ## Usage
 
-Make sure you have installed [python3](https://www.python.org/downloads/) and all [required](https://github.com/lev1khachatryan/VideoBackgroundEditor/blob/master/requirements.txt) packages.
+1. Make sure you have installed [python3](https://www.python.org/downloads/) and all [required](https://github.com/lev1khachatryan/VideoBackgroundEditor/blob/master/requirements.txt) packages.
 
+2. Go to python directory.
 
+3. Specify correct paths in [config](https://github.com/lev1khachatryan/VideoBackgroundEditor/blob/master/python/config.INI) file.
 
-
+4. Run `python bg_fg_combiner.py` in command line.
 
 
 
