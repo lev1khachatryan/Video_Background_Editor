@@ -74,4 +74,30 @@ There are two resource consumption points:
 4. Run `python bg_fg_combiner.py` in command line.
 
 
+## Additional works
+
+* [Background extraction with C++](https://github.com/lev1khachatryan/VideoBackgroundEditor/tree/master/cpp/BackgroundSubtractor)
+
+* [Moving Objects extraction](https://github.com/lev1khachatryan/VideoBackgroundEditor/blob/master/python/mo_subtractor.py)
+
+
+
+## My Running Environment
+
+### Hardware
+
+* CPU: Intel® Core™ i5-8250U (1.60GHz x 8 cores, 16 threads)
+
+* GPU: NVIDIA® GeForce GTX 1080/PCle/SSE2
+
+* Memory: 8GB GiB
+
+* OS type: 64-bit
+
+* Disk: 1.2 TB
+
+
+### Operating System
+
+Windows 10 
 
