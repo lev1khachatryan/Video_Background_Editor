@@ -63,6 +63,10 @@ There are two resource consumption points:
 
 
 
+## Usage
+
+Make sure you have installed [python3](https://www.python.org/downloads/) and all [required](https://github.com/lev1khachatryan/VideoBackgroundEditor/blob/master/requirements.txt) packages.
+
 
 
 
