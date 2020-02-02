@@ -9,7 +9,7 @@ The program consists of the following steps:
     1. Background extraction.
     2. Foreground (moving object) extraction and change of background.
 
-## 1. Background subtraction from video
+## 1. Background subtraction from video.
 
 We can assume most of the time, every pixel sees the same piece of the background because the camera is not moving. Occasionally, moving object comes in the front and obscure the background. For a video sequence, we can randomly sample a few frames (say 25 frames) per second. So, for every pixel, we now have 25 values of the background. As long as a pixel is not covered by a moving object more than 50% of the time, the median of the pixel over these frames will give a good estimate of the background at that pixel.
 
@@ -53,8 +53,13 @@ GrabCut Scheme
 ![](_assets/grabcut_scheme.jpg)
 
 
-## Speed consumption of my solution
+## Speed/Resource consumption.
 
+There are two resource consumption points:
+
+* Get figure with GrabCut - Each frame takes around 0.7 seconds to get figure, when the number of iterations set 1.
+
+* Inappropriate size of rectangle - It also affects speed apparently. A large rectangle leads slowdown of the algorithm. 
 
 
 
